@@ -1,0 +1,26 @@
+{
+  "name": "sasc",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swell-investing/sasc.git"
+  },
+  "scripts": {
+    "docs:transcribe:sasc:rails": "transcribe --url ../{filename}#L{line} --heading-prefix '#%' --prefix '#.' --insert-into docs/RailsSASC.md app/controllers/api/sasc_base_controller.rb lib/sasc/* spec/support/sasc_helpers.rb",
+    "docs:transcribe:sasc:redux": "transcribe --url ../{filename}#L{line} --heading-prefix '//%' --insert-into docs/ReduxSASC.md client/assets/javascripts/lib/resourceLib.js client/assets/javascripts/lib/resourceLib/* client/assets/javascripts/components/shared/WithResources.jsx client/assets/javascripts/sagas/helpers.js spec/javascripts/support/resources.js",
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "redux": "^3.5.2",
+    "redux-saga": "^0.15.3",
+    "redux-saga-tester": "^1.0.302",
+  },
+  "devDependencies": {
+    "jest": "23.5.0",
+    "jest-junit": "^5.1.0",
+  }
+}
